@@ -1,0 +1,25 @@
+{
+  "name": "craft_cart",
+  "version": "1.0.0",
+  "description": "https://jintchbarbare.github.io/Craft_Cart/",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JintchBarbare/Craft_Cart.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/JintchBarbare/Craft_Cart/issues"
+  },
+  "homepage": "https://github.com/JintchBarbare/Craft_Cart#readme",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
