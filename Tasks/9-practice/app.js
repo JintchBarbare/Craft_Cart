@@ -101,3 +101,7 @@ for (const score of scores) {
   }
 }
 console.log(passed.length);
+
+
+
+console.log("");
