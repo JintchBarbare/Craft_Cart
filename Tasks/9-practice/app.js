@@ -72,7 +72,7 @@ const titles = ["Sunrise", "Harbour", "Cedar"];
 const minutes = [180, 240, 195];
 if (titles.length === minutes.length) {
     for (let i=0; i<titles.length; i++) {
-        console.log(titles + "->" + minutes + "min");
+        console.log(titles[i] + "->" + minutes[i] + "min");
     }
 }else{
     console.log("მასივების სიგრძეები არ არის ტოლი");
@@ -101,3 +101,37 @@ for (const score of scores) {
   }
 }
 console.log(passed.length);
+
+
+
+console.log('.------------------------');
+const array = [5, 10, 15, 20];
+let sum = 0;
+for (let i=0; i<array.length; i++){
+    sum = sum + array[i];
+}
+console.log(sum);
+
+
+const arr=[10, 15, 30, 2, 45];
+let max = 0;
+for (let i=0; i<arr.length; i++){
+    if(max<arr[i]) {
+        max=arr[i];
+    }
+}
+console.log(max);
+
+
+console.log('.------------------------');
+const obj = {id: 123, name: "book", price: 50};
+const products = [
+  { id: "cc-c1", name: "Stoneware Plate", price: 22, category: "Ceramics", inStock: true, isSale: false, isNew: true },
+  { id: "cc-c2", name: "Wool Throw", price: 64, category: "Textiles", inStock: true, isSale: true, isNew: false },
+  { id: "cc-c3", name: "Etched Vase", price: 48, category: "Glass", inStock: false, isSale: false, isNew: false },
+  { id: "cc-c4", name: "Copper Hook", price: 15, category: "Home", inStock: true, isSale: false, isNew: true },
+];
+console.log(obj["id"]);
+console.log(products[3].name);
+const expBook = products.filter((item)=>item.price>40);
+console.log(expBook);
