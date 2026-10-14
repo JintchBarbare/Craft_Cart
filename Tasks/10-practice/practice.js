@@ -20,7 +20,6 @@ console.log(film.onShelf);
 
 
 console.log('2.------------------------');
-
 // ამოცანა 2 — Dot vs bracket
 const field = "minutes";
 
@@ -63,7 +62,6 @@ films.push(
 
 console.log(films.length);
 console.log(films[films.length-1].title);
-
 
 
 console.log('5.------------------------');
