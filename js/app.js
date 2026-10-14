@@ -111,3 +111,57 @@ for (let i=0; i<products.length; i++){
     totalPrice=totalPrice+products[i].price;
 }
 console.log("the avarage price is: ", totalPrice/products.length);
+
+
+
+
+console.log("------------------------------------11");
+// 11
+
+console.log("------1------");
+// ამოცანა 1 — ფასის ფორმატირება (formatPrice)
+function formatPrice(amount) {
+    return amount + " GEL";
+}
+
+const formattedProducts = products.map(product => {
+    const formatted = formatPrice(product.price);
+    console.log(product.name + "-" + formatted);
+    return {
+        name: product.name,
+        price: formatted
+    };
+});
+
+console.log("------2------");
+// ამოცანა 2 — პროდუქტის Badge (getProductBadge)
+function getProductBadge(product) {
+    if (!product.inStock) {
+        return "Sold out";
+    } else if (product.isSale) {
+        return "Sale";
+    } else if (product.isNew) {
+        return "New";
+    } else {
+        return "Regular";
+    }
+}
+products.forEach(product => {
+    const badge = getProductBadge(product);
+    console.log(product.name + "-" + badge);
+});
+
+
+console.log("------3------");
+// ამოცანა 3 — 10%-იანი ფასდაკლების Closure Factory
+function createDiscountCalculator(rate) {
+    return function(price) {
+        return price - (price * rate);
+    };
+}
+
+const autumn10 = createDiscountCalculator(0.10);
+products.filter(product => product.isSale).forEach(product => {
+    const discountedPrice = autumn10(product.price);
+    console.log(product.name + " - Old price: " + product.price + " GEL; New price: " + discountedPrice + " GEL");
+});
