@@ -1,12 +1,20 @@
-// js/products.js
 export const products = [
-    {id: 1, name: "Garden Walk", price: 150, category: "Paintings", inStock: true, isSale: false, isNew: false },
-    {id: 2, name: "Forest Vortex", price: 135, category: "Paintings", inStock: true, isSale: false, isNew: false},
-    {id: 3, name: "Golden Harmony", price: 115, category: "Paintings", inStock: true, isSale: false, isNew: true},
-    {id: 4, name: "Desert", price: 75, category: "Paintings", inStock: true, isSale: true, isNew: false},
-    {id: 5, name: "Mediterranean", price: 85, category: "Paintings", inStock: true, isSale: false, isNew: false},
-    {id: 6, name: "Whirlpool", price: 120, category: "Paintings", inStock: true, isSale: true, isNew: false},
-    {id: 7, name: "Flight of Freedom", price: 80, category: "Paintings", inStock: true, isSale: false, isNew: true},
-    {id: 8, name: "Autumn", price: 95, category: "Paintings", inStock: true, isSale: true, isNew: false},
-    {id: 9, name: "Silence of the Lilies", price: 105, category: "Paintings", inStock: true, isSale: false, isNew: true}
+    {id: 1, name: "Garden Walk", description: "ორიგინალური ნამუშევარი, თანამედროვე სურეალიზმის სტილი. შესრულებილია აკრილის საღებავით ტილოზე, იმპასტო სტილით.", 
+        price: 150, category: "Paintings", inStock: true, isSale: false, isNew: false, image: "../Image4CraftCart/featured_1.jfif"},
+    {id: 2, name: "Forest Vortex", description: "თანამედროვე ნამუშევარი ვან გოგის ელემენტებით, პოსტიმპრესიონიზმის სტილი. შესრულებულია აკრილით ტილოზე ფაქტურული მონასმებით", 
+        price: 135, category: "Paintings", inStock: true, isSale: false, isNew: false, image: "../Image4CraftCart/featured_2.jfif"},
+    {id: 3, name: "Golden Harmony", description: "თანამედროვე გრაფიკული ხელოვნების ნიმუში. სტილი შთაგონებულია კუბიზმითა და აფრიკული მოტივებით. გამოირჩევა გაჯერებული ფერებით, მკვეთრი გეომეტრიული ფორმებითა და ოქროსფერი აქცენტებით.", 
+        price: 115, category: "Paintings", inStock: true, isSale: false, isNew: true, image: "../Image4CraftCart/products_1.jfif"},
+    {id: 4, name: "Desert", description: "ხალხური ხელოვნების (Folk art) სტილში შესრულებული ილუსტრაცია. ტილო გამოირჩევა მდიდარი ტექსტურით, თბილი, მიწისფერი პალიტრითა და ეთნიკური ორნამენტებით, რომლებიც სამხრეთულ განწყობას ქმნის.", 
+        price: 75, oldPrice: 125, category: "Paintings", inStock: true, isSale: true, isNew: false, image: "../Image4CraftCart/products_2.jfif"},
+    {id: 5, name: "Mediterranean", description: "აკვარელით შესრულებული ნატიურმორტი, რომელიც გადმოსცემს ხმელთაშუაზღვისპირეთის მყუდრო ატმოსფეროს. ნამუშევარი გამოირჩევა დეტალების სიზუსტით, ფერების გამჭვირვალობითა და Light & Airy ესთეტიკით.", 
+        price: 85, category: "Paintings", inStock: true, isSale: false, isNew: false, image: "../Image4CraftCart/products_3.jfif"},
+    {id: 6, name: "Whirlpool", description: "თანამედროვე სიურეალისტური გრაფიკული ხელოვნების ნიმუში. გამოირჩევა რეალისტური დეტალებით, კონტრასტული ფერებით და შთამბეჭდავი მეტაფორული კომპოზიციით, სადაც ქალის სახე შერწყმულია ზღვის პეიზაჟთან.", 
+        price: 120, oldPrice: 145, category: "Paintings", inStock: true, isSale: true, isNew: false, image: "../Image4CraftCart/products_4.jfif"},
+    {id: 7, name: "Flight of Freedom", description: "თანამედროვე იმპრესიონისტული ხელოვნების ნიმუში. სტილი შთაგონებულია ტექსტურული ფერწერითა და აბსტრაქტული მოტივებით. გამოირჩევა მკვეთრი ფერთა კონტრასტებით, რელიეფური მონასმებითა და შთამბეჭდავი დინამიკური კომპოზიციით.", 
+        price: 80, category: "Paintings", inStock: true, isSale: false, isNew: true, image: "../Image4CraftCart/products_5.jfif"},
+    {id: 8, name: "Autumn", description: "თანამედროვე ფიგურატიული ხელოვნების ნიმუში. სტილი შთაგონებულია კუბიზმითა და ეთნიკური მოტივებით. გამოირჩევა გაჯერებული დედამიწის ფერებით, თამამი ზოლებითა და დახვეწილი აქცენტებით.", 
+        price: 95, oldPrice: 125, category: "Paintings", inStock: true, isSale: true, isNew: false, image: "../Image4CraftCart/products_6.jfif"},
+    {id: 9, name: "Silence of the Lilies", description: "ელეგანტური პორტრეტი ზეთის საღებავის სტილში. სტილი შთაგონებულია გვიანი არტ-ნუვოთი და მოდის ილუსტრაციით. გამოირჩევა მკვეთრი კონტრასტებით, ტექსტურირებული მწვანე ფონითა და დახვეწილი ფლორალური აქცენტებით.", 
+        price: 105, category: "Paintings", inStock: true, isSale: false, isNew: true, image: "../Image4CraftCart/products_7.jfif"}
 ];

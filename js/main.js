@@ -1,5 +1,7 @@
 import { products } from './products.js';
 import { formatPrice, getProductBadge, applyDiscount } from './utils.js';
+import { createProductCard, renderCatalog, renderFeatured } from './ui.js';
+
 
 console.log("------------------------------------10");
 // 10
@@ -68,3 +70,12 @@ products
     });
 
     
+
+// 12
+console.log("------12.1------");
+const sampleCard = createProductCard(products[1]);
+console.log("Created Product Card:", sampleCard);
+
+renderCatalog(products);
+
+renderFeatured(products);
