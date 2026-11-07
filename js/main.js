@@ -79,3 +79,69 @@ console.log("Created Product Card:", sampleCard);
 renderCatalog(products);
 
 renderFeatured(products);
+
+
+
+// 14
+// ამოცანა 4 — "კალათაში დამატების" ღილაკი და Event Delegation
+let cartCount = parseInt(localStorage.getItem("cartCount")) || 0;
+
+const cartBadge = document.querySelector("#cart-badge");
+if (cartBadge) {
+    cartBadge.textContent = cartCount;
+}
+
+function handleAddToCart(e) {
+    const addBtn = e.target.closest(".btn-add");
+    if (!addBtn) return;
+
+    const card = addBtn.closest(".product-card");
+    const id = card.dataset.id;
+    
+    cartCount++;
+    localStorage.setItem("cartCount", cartCount);
+    
+    if (cartBadge) {
+        cartBadge.textContent = cartCount;
+    }
+    
+    console.log(`პროდუქტი ID: ${id} დაემატა კალათაში. სულ: ${cartCount}`);
+}
+
+const productsGrid = document.querySelector("#products-grid");
+if (productsGrid) {
+    productsGrid.addEventListener("click", handleAddToCart);
+}
+
+const featuredGrid = document.querySelector("#featured-grid");
+if (featuredGrid) {
+    featuredGrid.addEventListener("click", handleAddToCart);
+}
+
+renderCatalog(products);
+renderFeatured(products);
+
+
+// ამოცანა 5 — საკონტაქტო ფორმა გვერდის გადატვირთვის გარეშე
+const contactForm = document.querySelector("#contact-form");
+const formFeedback = document.querySelector("#form-feedback");
+
+if (contactForm) {
+    contactForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const userNameInput = document.querySelector("#user-name");
+        const userName = userNameInput.value.trim();
+
+        if (userName.length < 2) {
+            formFeedback.textContent = "სახელი უნდა იყოს მინიმუმ 2 სიმბოლო";
+            formFeedback.style.color = "red";
+            return;
+        }
+
+        formFeedback.textContent = `გმადლობთ ${userName}! თქვენი შეტყობინება მიღებულია.`;
+        formFeedback.style.color = "green";
+        
+        contactForm.reset();
+    });
+}

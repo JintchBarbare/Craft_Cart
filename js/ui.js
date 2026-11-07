@@ -32,8 +32,19 @@ export function createProductCard(product) {
         price.textContent = `₾ ${product.price}`;
     }
 
-    card.append(img, category, title, description, price);
-
+    // 14
+    // ამოცანა 4 — "კალათაში დამატების" ღილაკი და Event Delegation
+    const addBtn = document.createElement("button");
+    addBtn.classList.add("btn-add");
+    
+    if (product.inStock === false) {
+        addBtn.disabled = true;
+        addBtn.textContent = "მარაგი ამოწურულია";
+    } else {
+        addBtn.textContent = "კალათაში დამატება";
+    }
+    
+    card.append(img, category, title, description, price, addBtn);
     return card;
 }
 

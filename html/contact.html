@@ -17,13 +17,14 @@
                 <li><a href="../index.html#featured">Featured Products</a></li>
                 <li><a href="products.html">Products</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li><a href="#">კალათა (<span id="cart-badge">0</span>)</a></li>
             </ul>
         </nav>
         <div class="logo">CraftCart</div>
     </header>
     
     <main id="contact">
-        <form class="inquiry-form" method="post">
+        <form id="contact-form" class="inquiry-form" method="post">
             <div>
                 <label for="user-name">სახელი</label>
                 <input type="text" id="user-name" placeholder="თქვენი სახელი" required>
@@ -34,7 +35,6 @@
                 <input type="email" id="email" placeholder="თქვენი Email" required>
             </div>
             
-            
             <label for="inquiry-type">სასურველი თემა</label>
             <select id="inquiry-type" name="topic" required>
                 <option value="" disabled selected>აირჩიეთ თემა...</option>
@@ -44,9 +44,11 @@
             </select>
             
             <label for="massage-text">თქვენი შეტყობინება</label>
-            <textarea id="massage-text" name="Massage" rows="10"></textarea>
+            <textarea id="massage-text" name="Massage" rows="10" required></textarea>
             
             <button type="submit" class="btn-submit">გაგზავნა</button>
+
+            <p id="form-feedback"></p>
         </form>
     </main>
 
@@ -69,6 +71,8 @@
             </svg>
         </span>
     </label>
+
+    <script type="module" src="../js/main.js"></script>
 
 
 </body>
